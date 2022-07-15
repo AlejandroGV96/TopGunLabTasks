@@ -1,3 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using Lecture_3;
 
-Console.WriteLine("Hello, World!");
+foreach (var num in Tasks.GetFibonacci(20))
+{
+    Console.WriteLine(num);
+}
