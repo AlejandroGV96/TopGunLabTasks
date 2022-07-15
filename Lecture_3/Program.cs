@@ -1,3 +1,6 @@
 ﻿using Lecture_3;
 
-Console.WriteLine($"{Tasks.GetFactorial(7)}");
+foreach (var num in Tasks.GetFibonacci(20))
+{
+    Console.WriteLine(num);
+}
