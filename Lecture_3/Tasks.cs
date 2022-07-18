@@ -4,8 +4,7 @@ public static class Tasks
 {
     public static IEnumerable<int> GetFibonacci(int number)
     {
-        int prev1 = 0, prev2 = 0, index = 0, onHold;
-        
+        int prev1 = 0, prev2 = 0, index = 0;
         return Enumerable
             .Repeat(-1, number)
             .Select(num =>
@@ -15,9 +14,8 @@ public static class Tasks
                         0 or 1 => 1,
                         _ => prev2 + prev1
                     };
-                    onHold = num;
                     prev2 = prev1;
-                    prev1 = onHold;
+                    prev1 = num;
                     return num;
                 });
     }
